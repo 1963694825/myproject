@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="header">
+    <text class="title">抖音去水印工具</text>
+    <text class="subtitle">粘贴抖音视频链接，轻松去除水印</text>
+  </view>
+
+  <view class="input-section">
+    <textarea 
+      class="url-input" 
+      placeholder="请粘贴抖音视频链接，支持 douyin.com 或 iesdouyin.com 格式" 
+      value="{{videoUrl}}"
+      bindinput="onInput"
+    ></textarea>
+    
+    <button 
+      class="parse-btn" 
+      bindtap="parseVideo" 
+      loading="{{isLoading}}"
+    >
+      {{isLoading ? '解析中...' : '立即解析'}}
+    </button>
+  </view>
+
+  <view class="instructions">
+    <text class="instruction-title">使用说明：</text>
+    <view class="instruction-item">
+      <text>1. 打开抖音APP，找到想要去水印的视频</text>
+    </view>
+    <view class="instruction-item">
+      <text>2. 点击视频右下角的分享按钮</text>
+    </view>
+    <view class="instruction-item">
+      <text>3. 选择"复制链接"选项</text>
+    </view>
+    <view class="instruction-item">
+      <text>4. 粘贴到上方输入框，点击"立即解析"</text>
+    </view>
+    <view class="instruction-item">
+      <text>5. 等待解析完成，即可获取无水印视频</text>
+    </view>
+  </view>
+</view>
